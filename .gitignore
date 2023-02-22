@@ -1,0 +1,7 @@
+node_modules
+dist
+globalConfig.json
+coverage
+
+.env
+coverage
