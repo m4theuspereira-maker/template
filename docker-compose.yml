@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  template:
+    container_name: template
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    command: "yarn start"
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/app"
