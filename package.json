@@ -4,12 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "build": "yarn && yarn rimraf dist && npx rimraf .husky && yarn tsc -p tsconfig-build.json && yarn prepare",
     "test": "jest --config ./jest.config.js --detectOpenHandles --forceExit",
     "test:watch": "yarn test -- --watch",
     "test:coverage": "yarn test -- --coverage",
     "dev": "nodemon src/index.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepare": "husky install && npx husky add .husky/pre-commit 'yarn lint-staged' && npx husky add .husky/pre-push 'yarn lint-staged && yarn test' "
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -28,6 +29,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
     "jest": "^27.5.1",
     "lint-staged": "^13.2.0",
     "nodemon": "^2.0.15",
@@ -36,5 +38,14 @@
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
+  },
+  "hooks": {
+    "pre-commit": "lint-staged",
+    "pre-push": "yarn eslint"
+  },
+  "lint-staged": {
+    "**/*.{ts,js}": [
+      "yarn test --watchAll=false findRealatedTests --bail"
+    ]
   }
 }
