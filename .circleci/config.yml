@@ -9,8 +9,10 @@ jobs:
     docker:
       - image: node
         auth: 
-          username: ${DOCKER_HUB_USERNAME}
-          password: ${DOCKER_HUB_PASSWORD}
+          # these env vars are setted in circleci configs
+          # if you wanna implement CI/CD with circleci checkout the docummentation in https://circleci.com/docs/
+          username: ${YOUR_DOCKERHUB_USERNAME}
+          password: ${YOUR_DOCKERHUB_PASSWORD}
     steps:
       - checkout
       - restore_cache:
