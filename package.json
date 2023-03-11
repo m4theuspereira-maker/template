@@ -2,8 +2,7 @@
   "name": "iot-manager",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT", 
-
+  "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "test": "jest --config ./jest.config.js --detectOpenHandles --forceExit",
@@ -12,30 +11,30 @@
     "dev": "nodemon src/index.ts",
     "start": "node dist/index.js"
   },
-
-   "dependencies": {
+  "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3"
-  }, 
+  },
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "prettier": "^2.6.1",
-    "supertest": "^6.2.2",
-    "ts-jest": "^27.1.4",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.3",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.4.1",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
     "eslint": "^8.12.0",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
-    "@types/supertest": "^2.0.12",
-    "@typescript-eslint/eslint-plugin": "^5.16.0",
-    "@types/cors": "^2.8.12",
-    "@types/dotenv": "^8.2.0",
-    "@types/express": "^4.17.13",
-    "@types/jest": "^27.4.1",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "lint-staged": "^13.2.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.1",
+    "supertest": "^6.2.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   }
 }
