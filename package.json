@@ -10,7 +10,7 @@
     "test:coverage": "yarn test -- --coverage",
     "dev": "nodemon src/index.ts",
     "start": "node dist/index.js",
-    "prepare": "husky install && npx husky add .husky/pre-commit 'yarn lint-staged' && npx husky add .husky/pre-push 'yarn lint-staged && yarn test' "
+    "prepare": "husky install && npx husky add .husky/pre-commit 'yarn lint-staged' && npx husky add .husky/pre-push 'yarn test' "
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -45,7 +45,7 @@
   },
   "lint-staged": {
     "**/*.{ts,js}": [
-      "yarn test --watchAll=false findRealatedTests --bail"
+      "yarn test --watchAll=false findRealatedTests --passWithNoTests --bail"
     ]
   }
 }
