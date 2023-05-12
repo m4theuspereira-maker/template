@@ -80,13 +80,7 @@ $ docker run template-template
 ```
 ├─ .circleci
 │  └─ config.yml
-├─ src
-│  ├─ config
-│  │  ├─ dotenv.ts
-│  │  └─ environment-consts.ts
-│  └─ index.ts
-├─ tests
-│  └─ example.spec.ts
+├─ .dockerignore
 ├─ .editorconfig
 ├─ .eslintignore
 ├─ .eslintrc.json
@@ -98,6 +92,13 @@ $ docker run template-template
 ├─ jest.config.js
 ├─ nodemon.json
 ├─ package.json
+├─ src
+│  ├─ config
+│  │  └─ environment-consts.ts
+│  ├─ index.ts
+│  └─ routes.ts
+├─ tests
+│  └─ example.spec.ts
 ├─ tsconfig-build.json
 ├─ tsconfig.json
 ├─ yarn-error.log
