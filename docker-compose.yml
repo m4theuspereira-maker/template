@@ -13,3 +13,8 @@ services:
       - "3000:3000"
     volumes:
       - "./:/app"
+    networks:
+      - template_network
+
+networks:
+  template_network:
