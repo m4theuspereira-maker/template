@@ -63,6 +63,17 @@ $ yarn test:coverage
 ```
 $ docker-compose up
 ```
+To build a container and then start automatically
+
+```
+$ docker-compose build
+```
+To build a container with dockerfile configs, you can start manually with the command
+
+```
+$ docker run template-template
+```
+
 
 ## Project folders schema
 
