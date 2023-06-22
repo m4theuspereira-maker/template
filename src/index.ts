@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { PORT } from "./config/environment-consts";
+import { PORT } from "./common/environment-consts";
 import { routes } from "./routes";
 
 const app = express();
