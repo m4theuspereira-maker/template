@@ -76,7 +76,6 @@ $ docker run template-template
 
 
 ## Project folders schema
-
 ```
 ├─ .circleci
 │  └─ config.yml
@@ -93,11 +92,12 @@ $ docker run template-template
 ├─ nodemon.json
 ├─ package.json
 ├─ src
-│  ├─ config
+│  ├─ common
 │  │  └─ environment-consts.ts
 │  ├─ index.ts
 │  └─ routes.ts
 ├─ tests
+│  ├─ example.int.spec.ts
 │  └─ example.spec.ts
 ├─ tsconfig-build.json
 ├─ tsconfig.json
