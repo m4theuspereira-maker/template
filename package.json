@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "npm ci && npx rimraf dist && npx rimraf .husky && npx tsc -p tsconfig-build.json && npm run prepare",
+    "build": "npx rimraf dist && npx tsc -p tsconfig-build.json",
     "test": "jest --config ./jest.config.js --detectOpenHandles --forceExit",
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage",
