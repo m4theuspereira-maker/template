@@ -13,19 +13,19 @@ The template comes by default with some basic commands, for example:
 (to know more about husky: https://typicode.github.io/husky/#/)
 
 ```
-$ yarn build
+$ npm run build
 ```
 
 ### Or if you wanna just create .husky folder with pre-push and pre-commit files
 
 ```
-$ yarn prepare
+$ npm run prepare
 ```
 
 ### To start project from dist folder
 
 ```
-$ yarn start
+$ npm start
 ```
 
 ### To start project from src folder with nodemon
@@ -33,13 +33,13 @@ $ yarn start
 (to know more about nodemon: https://nodemon.io/)
 
 ```
-$ yarn dev
+$ npm run dev
 ```
 
 ### Run all the test suits
 
 ```
-$ yarn test
+$ npm test
 ```
 
 ### Select wich suit you wanna run in watch mode or related files uncommited by git
@@ -47,13 +47,13 @@ $ yarn test
 (know more in: https://jestjs.io/docs/cli)
 
 ```
-$ yarn test:watch
+$ npm run test:watch
 ```
 
 ### Run all the tests and generate bunch of informations about project test coverage
 
 ```
-$ yarn test:coverage
+$ npm run test:coverage
 ```
 
 ### To start project from docker container
@@ -63,19 +63,21 @@ $ yarn test:coverage
 ```
 $ docker-compose up
 ```
+
 To build a container and then start automatically
 
 ```
 $ docker-compose build
 ```
+
 To build a container with dockerfile configs, you can start manually with the command
 
 ```
 $ docker run template-template
 ```
 
-
 ## Project folders schema
+
 ```
 ├─ .circleci
 │  └─ config.yml

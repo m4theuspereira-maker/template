@@ -1,6 +1,6 @@
 {
   "name": "template-node-ci",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "That's a simple solution to start APIs in nodejs if you don't want to download all dependencies every time when you start some new project.",
   "directories": {
     "test": "tests"
