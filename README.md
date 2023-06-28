@@ -28,9 +28,7 @@ $ npm run prepare
 $ npm start
 ```
 
-### To start project from src folder with nodemon
-
-(to know more about nodemon: https://nodemon.io/)
+### To start project from src folder with tsx
 
 ```
 $ npm run dev
@@ -91,7 +89,6 @@ $ docker run template-template
 ├─ README.md
 ├─ docker-compose.yml
 ├─ jest.config.js
-├─ nodemon.json
 ├─ package.json
 ├─ src
 │  ├─ common
