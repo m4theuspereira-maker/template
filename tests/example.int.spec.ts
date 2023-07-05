@@ -1,5 +1,6 @@
 import supertest from "supertest";
 import { server } from "../src/index";
+import {describe, afterAll, test, expect} from 'vitest'
 
 describe("example route", () => {
   afterAll(() => {
