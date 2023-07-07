@@ -1,7 +1,9 @@
-import { setupMiddlewares } from "./common/setup-middlewares";
-import { setupRoutes } from "./common/setup-routes";
-import express from "express";
+import express, { json, urlencoded } from "express";
+import cors from "cors";
+import { routes } from "./routes";
 
 export const app = express();
-setupMiddlewares(app);
-setupRoutes(app);
+app.use(json());
+app.use(urlencoded({ extended: true }));
+app.use(cors());
+app.use("/", routes);
