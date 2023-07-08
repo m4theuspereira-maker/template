@@ -8,11 +8,11 @@ jobs:
   setup-project:
     docker:
       - image: node
-        auth: 
+        auth:
           # these env vars are setted in circleci configs
           # if you wanna implement CI/CD with circleci checkout the docummentation in https://circleci.com/docs/
-          username: ${YOUR_DOCKERHUB_USERNAME}
-          password: ${YOUR_DOCKERHUB_PASSWORD}
+          username: ${DOCKERHUB_USERNAME}
+          password: ${DOCKERHUB_PASSWORD}
     steps:
       - checkout
       - restore_cache:
@@ -36,11 +36,10 @@ jobs:
       - run:
           name: "running tests"
           command: yarn test
-         
+
 workflows:
   say-hello-workflow:
     jobs:
       - setup-project
 
 
-    
