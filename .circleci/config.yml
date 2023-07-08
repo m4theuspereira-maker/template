@@ -38,7 +38,7 @@ jobs:
           command: yarn test
 
 workflows:
-  say-hello-workflow:
+  build-and-run-tests:
     jobs:
       - setup-project
 
