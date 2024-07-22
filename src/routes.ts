@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { controllerFactory } from "./factories/controller-factories";
 
 const routes = Router();
-
-routes.get("/", (req, res) => res.send("I'm working"));
+const controller = controllerFactory();
+routes.get("/", controller.test);
 
 export { routes };
