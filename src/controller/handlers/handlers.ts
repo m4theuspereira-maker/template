@@ -13,5 +13,5 @@ export const ok = (res: Response, data?: any): Response => {
     return res.status(200);
   }
 
-  return res.status(200).json({ body: data });
+  return res.status(200).json({ data });
 };

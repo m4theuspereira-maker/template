@@ -9,11 +9,11 @@ describe("example route", () => {
     status: 200
     POST route:/
     `, async () => {
-      const { status, text } = await supertest(app).get("/").send();
+      const { status, body } = await supertest(app).get("/").send();
 
-      expect({ status, text }).toStrictEqual({
+      expect({ status, body }).toStrictEqual({
         status: 200,
-        text: "I'm working"
+        body: { data: "I'm working" }
       });
     });
   });
